@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Карточка товара с иконками</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+    <div>
+        <a href="/index.html">Назад на главную</a>
+    </div>
+
+    <h1>Форма</h1>
+
+    <form autocomplete="off" class="form js-form">
+        <div class="form-field">
+            <h2 class="form-name">Оставьте свои данные, мы вам перезвоним</h2>
+            <label for="customer-name"></label>
+            <input autofocus type="text" placeholder="Имя" name="customer-name" id="customer-name" />
+        </div>
+
+        <div class="form-field">
+            <label for="customer-phone"></label>
+            <input type="tel" autocomplete="on" placeholder="Телефон" name="customer-phone" id="customer-phone" />
+        </div>
+
+        <div class="form-field">
+            <label for="customer-mail"></label>
+            <input type="text" placeholder="Почта" name="customer-mail" id="customer-mail" />
+        </div>
+        <!-- Комментарий к заказу -->
+        <div class="form-field">
+            <label for="comment">Комментарии к заказу</label>
+            <textarea name="comment" id="comment" rows="5"> </textarea>
+        </div>
+
+        <div class="form-field">
+            <div>
+                <input type="checkbox" required value="policy" name="policy" id="policy" />
+                <label for="policy">Согласен с рассылкой и пинимаю</label>
+                <a href="">Условия договора</a>
+            </div>
+        </div>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <!-- Комментарий к заказу -->
+
+    <!-- Подтверждение -->
+
+    <script>
+        (() => {
+            document.querySelector('.js-form').addEventListener('submit', e => {
+                e.preventDefault();
+
+                console.log('');
+                console.count('Submit #');
+
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+            });
+        })();
+    </script>
+</body>
+
+</html>

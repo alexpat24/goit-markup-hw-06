@@ -50,8 +50,8 @@
       <h1 class="baner-text">
         ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА
       </h1>
-      <!-- <button class="baner-button">Заказать услугу</button> -->
-      <p class="baner-button">Заказать услугу</p>
+      <button class="baner-button" data-open-modal>Заказать услугу</button>
+      <!-- <button class="baner-button" type="submit">Заказать услугу</button> -->
     </section>
     <!-- quality part -->
     <section class="quality width-conteiner">
@@ -301,6 +301,62 @@
         </li>
       </ul>
     </section>
+    <!-- Модельное окно -->
+    <!-- Форма -->
+    <div class="backdrop is-hidden" data-backdrop>
+      <form autocomplete="off" class="form js-form">
+        <h2 class="form-name">Оставьте свои данные, мы вам перезвоним</h2>
+        <div class="form-field">
+          <input autofocus type="text" placeholder=" " name="customer-name" id="customer-name" class="form-input" />
+          <label for="customer-name" class="form-label">Имя</label>
+          <svg class="form-icon">
+            <use href="./img/form-symbol-defs.svg#icon-form-name">Cилуєт</use>
+          </svg>
+        </div>
+
+        <div class="form-field">
+          <input type="tel" autocomplete="on" placeholder=" " name="customer-phone" id="customer-phone"
+            class="form-input" />
+          <label for="customer-phone" class="form-label">Телефон</label>
+          <svg class="form-icon">
+            <use href="./img/form-symbol-defs.svg#icon-form-tel">phon</use>
+          </svg>
+        </div>
+
+        <div class="form-field">
+          <input type="text" placeholder=" " name="customer-mail" id="customer-mail" class="form-input" />
+          <label for="customer-mail" class="form-label">Почта</label>
+          <svg class="form-icon">
+            <use href="./img/form-symbol-defs.svg#icon-form-email">email</use>
+          </svg>
+        </div>
+
+        <!-- Комментарий к заказу -->
+        <div class="form-field-textarea">
+          <textarea name="comment" id="comment" rows="5" class="form-textarea" placeholder=" "> </textarea>
+          <label for="comment" class="form-label-textarea">Комментарий</label>
+        </div>
+
+        <div class="form-field-policy">
+          <div>
+            <input type="checkbox" required value="policy" name="policy" id="policy" />
+            <label for="policy" class="text-policy">Согласен с рассылкой и принимаю</label>
+            <a href="" class="policy ">Условия договора</a>
+          </div>
+        </div>
+
+        <button type="submit" class="form-push">Отправить</button>
+        <div class="form-close-button" data-close-modal>
+          <svg class="form-icon">
+            <use href="./img/form-symbol-defs.svg#icon-form-close"></use>
+          </svg>
+        </div>
+      </form>
+    </div>
+
+
+
+
   </main>
   <!-- footer part -->
   <footer>
@@ -358,6 +414,41 @@
     </div>
     <p class="disigner-info">2020 | Developed by GoIT Students</p>
   </footer>
+  <script>
+    (() => {
+      document.querySelector('.js-form').addEventListener('submit', e => {
+        e.preventDefault();
+
+        console.log('');
+        console.count('Submit #');
+
+        new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+        );
+      });
+    })();
+  </script>
+  <script>
+    const refs = {
+      openModalBtn: document.querySelector("[data-open-modal]"),
+      closeModalBtn: document.querySelector("[data-close-modal]"),
+      backdrop: document.querySelector("[data-backdrop]"),
+    };
+
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
+
+    refs.backdrop.addEventListener("click", logBackdropClick);
+
+    function toggleModal() {
+      refs.backdrop.classList.toggle("is-hidden");
+    }
+
+    function logBackdropClick() {
+      console.log("Это клик в бекдроп");
+    }
+  </script>
+
 </body>
 
 </html>

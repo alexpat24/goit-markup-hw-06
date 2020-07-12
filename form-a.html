@@ -5,7 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Карточка товара с иконками</title>
+    <link rel="stylesheet" href="https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css">
     <link rel="stylesheet" href="./css/styles.css" />
+
 </head>
 
 <body>
@@ -16,25 +18,26 @@
     <h1>Форма</h1>
 
     <form autocomplete="off" class="form js-form">
+        <h2 class="form-name">Оставьте свои данные, мы вам перезвоним</h2>
         <div class="form-field">
-            <h2 class="form-name">Оставьте свои данные, мы вам перезвоним</h2>
-            <label for="customer-name"></label>
-            <input autofocus type="text" placeholder="Имя" name="customer-name" id="customer-name" />
+            <input autofocus type="text" placeholder="" name="customer-name" id="customer-name" class="form-input" />
+            <label for="customer-name" class="form-label">Имя</label>
         </div>
 
         <div class="form-field">
-            <label for="customer-phone"></label>
-            <input type="tel" autocomplete="on" placeholder="Телефон" name="customer-phone" id="customer-phone" />
+            <input type="tel" autocomplete="on" placeholder="" name="customer-phone" id="customer-phone"
+                class="form-input" />
+            <label for="customer-phone" class="form-label">Телефон</label>
         </div>
 
         <div class="form-field">
-            <label for="customer-mail"></label>
-            <input type="text" placeholder="Почта" name="customer-mail" id="customer-mail" />
+            <input type="text" placeholder="" name="customer-mail" id="customer-mail" class="form-input" />
+            <label for="customer-mail" class="form-label">Почта</label>
         </div>
         <!-- Комментарий к заказу -->
         <div class="form-field">
-            <label for="comment">Комментарии к заказу</label>
             <textarea name="comment" id="comment" rows="5"> </textarea>
+            <label for="comment" class="form-label">Комментарий</label>
         </div>
 
         <div class="form-field">

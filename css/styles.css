@@ -1072,6 +1072,7 @@ footer{
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
+    border-radius: 5px;
     position: absolute;
     top: 8px;
     left: 30px;
@@ -1105,15 +1106,18 @@ footer{
 .form-input:not(:placeholder-shown) + .form-label,
 .form-textarea:hover + .form-label-textarea,
 .form-textarea:hover + .form-label-textarea,
-.form-input:not(:placeholder-shown) + .form-label{
+.form-textarea:not(:placeholder-shown) + .form-label-textarea{
     color: var(--accent-text-color);
     left: 0px;
     transform: translateY(-150%);
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .form-input:hover{
     border: 1px solid var(--accent-text-color);
+    cursor: pointer;
 }
+
 .form-name{
     display: flex;
     justify-content: center;
@@ -1126,6 +1130,7 @@ footer{
     position: relative;
     flex-direction: column;
     margin-bottom: 30px;
+    
 }
 .policy{
     color: var(--accent-text-color);
@@ -1147,6 +1152,7 @@ footer{
     color: var(--primary-white-color);
     background-color: var(--accent-text-color);
     border-color: var(--primary-white-color);
+    cursor: pointer;
 }
 .form-push:hover,
 .form-push:focus{
@@ -1170,10 +1176,10 @@ footer{
 .form-close-button{
     position: absolute;
     width: 40px;
-    height: 40px;
+    height: 40px; 
     top: 5px;
     right: 5px;
-    
+    cursor: pointer;
 }
 /* иконки */
 .form-icon{

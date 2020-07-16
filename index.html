@@ -323,6 +323,15 @@
           </svg>
         </div>
 
+
+        <!-- <label for="customer-phone" class="form-field">
+          <input type="tel" autocomplete="on" placeholder=" " name="customer-phone" class="form-input" />
+          <span class="form-label">Телефон</span>
+          <svg class="form-icon">
+            <use href="./img/form-symbol-defs.svg#icon-form-tel">phon</use>
+          </svg>
+        </label> -->
+
         <div class="form-field">
           <input type="text" placeholder=" " name="customer-mail" id="customer-mail" class="form-input" />
           <label for="customer-mail" class="form-label">Почта</label>
@@ -346,11 +355,11 @@
         </div>
 
         <button type="submit" class="form-push">Отправить</button>
-        <div class="form-close-button" data-close-modal>
-          <svg class="form-icon">
+        <button type="reset" class="form-close-button" data-close-modal>
+          <svg class="form-icon-close">
             <use href="./img/form-symbol-defs.svg#icon-form-close"></use>
           </svg>
-        </div>
+        </button>
       </form>
     </div>
 
@@ -417,7 +426,7 @@
   <script>
     (() => {
       document.querySelector('.js-form').addEventListener('submit', e => {
-        e.preventDefault();
+        e.preventDefault('');
 
         console.log('');
         console.count('Submit #');

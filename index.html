@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;700;900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://github.com/sindresorhus/modern-normalize/blob/master/modern-normalize.css">
+
   <link rel="stylesheet" href="./css/styles.css" />
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 
@@ -306,39 +307,56 @@
     <div class="backdrop is-hidden" data-backdrop>
       <form autocomplete="off" class="form js-form">
         <h2 class="form-name">Оставьте свои данные, мы вам перезвоним</h2>
-        <div class="form-field">
+
+        <label for="customer-name" class="form-field">
+          <input type="text" autocomplete="on" placeholder=" " name="customer-name" class="form-input" />
+          <span class="form-label">Имя</span>
+          <svg class="form-icon">
+            <use href="./img/form-symbol-defs.svg#icon-form-name">Cилуєт</use>
+          </svg>
+        </label>
+
+        <label for="customer-phone" class="form-field">
+          <input type="tel" autocomplete="on" placeholder=" " name="customer-phone" class="form-input" />
+          <span class="form-label">Телефон</span>
+          <svg class="form-icon">
+            <use href="./img/form-symbol-defs.svg#icon-form-tel">phon</use>
+          </svg>
+        </label>
+
+        <!-- <div class="form-field">
           <input autofocus type="text" placeholder=" " name="customer-name" id="customer-name" class="form-input" />
           <label for="customer-name" class="form-label">Имя</label>
           <svg class="form-icon">
             <use href="./img/form-symbol-defs.svg#icon-form-name">Cилуєт</use>
           </svg>
-        </div>
+        </div> -->
 
-        <div class="form-field">
+        <!-- <div class="form-field">
           <input type="tel" autocomplete="on" placeholder=" " name="customer-phone" id="customer-phone"
             class="form-input" />
           <label for="customer-phone" class="form-label">Телефон</label>
           <svg class="form-icon">
             <use href="./img/form-symbol-defs.svg#icon-form-tel">phon</use>
           </svg>
-        </div>
+        </div> -->
 
 
-        <!-- <label for="customer-phone" class="form-field">
-          <input type="tel" autocomplete="on" placeholder=" " name="customer-phone" class="form-input" />
-          <span class="form-label">Телефон</span>
+        <label for="customer-mail" class="form-field">
+          <input type="text" autocomplete="on" placeholder=" " name="customer-mail" class="form-input" />
+          <span class="form-label">Почта</span>
           <svg class="form-icon">
-            <use href="./img/form-symbol-defs.svg#icon-form-tel">phon</use>
+            <use href="./img/form-symbol-defs.svg#icon-form-email">email</use>
           </svg>
-        </label> -->
+        </label>
 
-        <div class="form-field">
+        <!-- <div class="form-field">
           <input type="text" placeholder=" " name="customer-mail" id="customer-mail" class="form-input" />
           <label for="customer-mail" class="form-label">Почта</label>
           <svg class="form-icon">
             <use href="./img/form-symbol-defs.svg#icon-form-email">email</use>
           </svg>
-        </div>
+        </div> -->
 
         <!-- Комментарий к заказу -->
         <div class="form-field-textarea">
